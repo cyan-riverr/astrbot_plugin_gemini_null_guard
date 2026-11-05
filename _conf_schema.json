@@ -1,0 +1,28 @@
+{
+  "model_keywords": {
+    "description": "生效关键词",
+    "type": "list",
+    "default": [
+      "gemini"
+    ],
+    "hint": "模型名或接口地址（base_url）里包含任意一个关键词就生效，不区分大小写。中转给模型起了别名时，把别名或中转域名加进来。"
+  },
+  "match_all_models": {
+    "description": "对所有模型生效",
+    "type": "bool",
+    "default": false,
+    "hint": "打开后忽略关键词，所有走 OpenAI 兼容接口的请求都会处理。"
+  },
+  "verbose_log": {
+    "description": "详细日志",
+    "type": "bool",
+    "default": false,
+    "hint": "打开后每次命中都写一条日志（包括 wrapped=0），用来确认插件有没有在工作。"
+  },
+  "clean_tool_schema": {
+    "description": "清理工具清单",
+    "type": "bool",
+    "default": true,
+    "hint": "发给模型前，删掉工具参数定义里 Gemini 不认的字段（default、additionalProperties、$schema、examples、非字符串 enum），信息挪进 description。只改发出去的那份，不改工具本身。"
+  }
+}
