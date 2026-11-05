@@ -1,0 +1,4 @@
+name: astrbot_plugin_gemini_null_guard
+desc: 修复 Gemini 中转工具调用 400：包好工具结果/历史参数里的数组和 null，清理工具清单里 Gemini 不认的字段
+version: 0.4.0
+author: xavier
